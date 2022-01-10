@@ -33,12 +33,12 @@ const restaurant = {
 };
 
 
-//Distructing_array
+//Destructing_array
 const arr = [2, 4, 6];
 
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
 
 const [x, y, z] = arr;
 console.log(x, z, y);
@@ -59,5 +59,42 @@ console.log(main, secondary);
 
 console.log(restaurant.order(2, 0));
 
+//receive two value from a function
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse);
+
+
+//Nested Destructing
+const nested = [2, 4, [5, 6]];
+// const [i, , j] = nested;
+// console.log(i, j);
+
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+//default values
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
+
+
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+
+console.log(b);
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+console.log(a, b, rest);
+
+({ a, b } = { a: 'neckles', b: 'diamond' });
+console.log(a, b);
+
+
+({ a, b, ...rest } = { a: 'glod', b: 'cooper', c: 30, d: 40 });
+console.log(a, b, rest);
+
+//swapping two values
+const arry = [2, 4, 6];
+[arry[0], arry[2]] = [arry[2], arry[0]];
+console.log(arry);
