@@ -32,7 +32,7 @@ const restaurant = {
     },
 };
 
-
+/* 
 //Destructing_array
 const arr = [2, 4, 6];
 
@@ -98,3 +98,31 @@ console.log(a, b, rest);
 const arry = [2, 4, 6];
 [arry[0], arry[2]] = [arry[2], arry[0]];
 console.log(arry);
+
+function parseProtocol(url) {
+    const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+    if (!parsedURL) {
+        return false;
+    }
+    console.log(parsedURL);
+    // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
+    // "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
+
+    const [, protocol, fullhost, fullpath] = parsedURL;
+    return protocol;
+}
+
+console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
+ */
+
+//Object destructuring
+
+const hridoy = {
+    fullName: 'Rakibul Hasan',
+    birthYear: 1997,
+    isVerified: true,
+};
+
+// const { fullName, birthYear, isVerified } = hridoy;
+const { fullName, ...others } = hridoy;
+console.log(others);
