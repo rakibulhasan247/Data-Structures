@@ -32,7 +32,7 @@ const restaurant = {
     },
 };
 
-/* 
+/*
 //Destructing_array
 const arr = [2, 4, 6];
 
@@ -113,7 +113,8 @@ function parseProtocol(url) {
 }
 
 console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
- */
+
+*/
 
 //Object destructuring
 
@@ -126,3 +127,55 @@ const hridoy = {
 // const { fullName, birthYear, isVerified } = hridoy;
 const { fullName, ...others } = hridoy;
 console.log(others);
+
+const m = { p: 50, f: false };
+const { p: park, f: field } = m;
+console.log(park, field);
+
+const userHridoy = {
+    id: 9578,
+    displayName: 'hridoyh69',
+    fullName: {
+        firstName: 'Hridoy',
+        lastName: 'Hasan'
+    },
+};
+
+function userId({ fullName, id }) {
+    return `You name is ${fullName.firstName} ${fullName.lastName} and id is ${id}`;
+};
+
+console.log(userId(userHridoy));
+
+const whois = function({ displayName, fullName: { firstName: name } }) {
+    return `${displayName} is ${name}`
+}
+
+console.log(whois(userHridoy));
+
+const people = [{
+        fullName: 'Hridoy Hasan',
+        family: {
+            mother: 'Rabeya Khatun',
+            father: 'Farid Hossain',
+            brother: 'Riyad Hasan',
+            girlFriend: null,
+        }
+
+
+    },
+
+    {
+        fullName: 'Sarah Smith',
+        family: {
+            mother: 'Jane Smith',
+            father: 'Harry Smith',
+            sister: 'Samantha Smith'
+        },
+    },
+];
+
+for (const { fullName: n, family: { father: f, mother: m } }
+    of people) {
+    console.log('fullName: ' + n + ', Father: ' + f + ', Mother: ' + m);
+}
