@@ -6,16 +6,12 @@ const flights =
 
 
 const restaurant = {
-    name: 'Classico Italiano',
+    resName: 'Classico Italiano',
     location: 'Via Angelo Tavanti 23, Firenze, Italy',
     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
     mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-
-    order: function(starterIndex, mainIndex) {
-        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-    },
     openingHours: {
         thu: {
             open: 12,
@@ -30,7 +26,119 @@ const restaurant = {
             close: 24,
         },
     },
+    order: function(starterIndex, mainIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    },
+    orderDelivery: function({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+        console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+    },
+
 };
+
+restaurant.orderDelivery({
+    time: '22:30',
+    address: 'Brahmanbaria,3045',
+    mainIndex: 2,
+    starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+    address: 'Brahmanbaria,3045',
+    starterIndex: 1,
+});
+
+//Object destructuring
+
+const { resName, categories, openingHours } = restaurant;
+console.log(resName, categories, openingHours);
+
+const { resName: restaurantName, categories: tags, openingHours: hours } = restaurant;
+console.log(restaurantName, tags, hours);
+
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// Mutating variables
+
+let a = 'Apples';
+let b = 'Balls';
+const obj = { a: 150, b: 50 };
+({ a, b } = obj);
+console.log(a, b);
+
+const { fri: { open: o, close: c } } = openingHours;
+console.log(o, c);
+
+
+
+
+
+
+
+
+
+
+/* const hridoy = {
+    fullName: 'Rakibul Hasan',
+    birthYear: 1997,
+    isVerified: true,
+};
+
+// const { fullName, birthYear, isVerified } = hridoy;
+const { fullName, ...others } = hridoy;
+console.log(others);
+
+const m = { p: 50, f: false };
+const { p: park, f: field } = m;
+console.log(park, field);
+
+const userHridoy = {
+    id: 9578,
+    displayName: 'hridoyh69',
+    fullName: {
+        firstName: 'Hridoy',
+        lastName: 'Hasan'
+    },
+};
+
+function userId({ fullName, id }) {
+    return `You name is ${fullName.firstName} ${fullName.lastName} and id is ${id}`;
+};
+
+console.log(userId(userHridoy));
+
+const whois = function({ displayName, fullName: { firstName: name } }) {
+    return `${displayName} is ${name}`
+}
+
+console.log(whois(userHridoy));
+
+const people = [{
+        fullName: 'Hridoy Hasan',
+        family: {
+            mother: 'Rabeya Khatun',
+            father: 'Farid Hossain',
+            brother: 'Riyad Hasan',
+            girlFriend: null,
+        }
+
+
+    },
+
+    {
+        fullName: 'Sarah Smith',
+        family: {
+            mother: 'Jane Smith',
+            father: 'Harry Smith',
+            sister: 'Samantha Smith'
+        },
+    },
+];
+
+for (const { fullName: n, family: { father: f, mother: m } }
+    of people) {
+    console.log('fullName: ' + n + ', Father: ' + f + ', Mother: ' + m);
+}; */
 
 /*
 //Destructing_array
@@ -115,67 +223,3 @@ function parseProtocol(url) {
 console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
 
 */
-
-//Object destructuring
-
-const hridoy = {
-    fullName: 'Rakibul Hasan',
-    birthYear: 1997,
-    isVerified: true,
-};
-
-// const { fullName, birthYear, isVerified } = hridoy;
-const { fullName, ...others } = hridoy;
-console.log(others);
-
-const m = { p: 50, f: false };
-const { p: park, f: field } = m;
-console.log(park, field);
-
-const userHridoy = {
-    id: 9578,
-    displayName: 'hridoyh69',
-    fullName: {
-        firstName: 'Hridoy',
-        lastName: 'Hasan'
-    },
-};
-
-function userId({ fullName, id }) {
-    return `You name is ${fullName.firstName} ${fullName.lastName} and id is ${id}`;
-};
-
-console.log(userId(userHridoy));
-
-const whois = function({ displayName, fullName: { firstName: name } }) {
-    return `${displayName} is ${name}`
-}
-
-console.log(whois(userHridoy));
-
-const people = [{
-        fullName: 'Hridoy Hasan',
-        family: {
-            mother: 'Rabeya Khatun',
-            father: 'Farid Hossain',
-            brother: 'Riyad Hasan',
-            girlFriend: null,
-        }
-
-
-    },
-
-    {
-        fullName: 'Sarah Smith',
-        family: {
-            mother: 'Jane Smith',
-            father: 'Harry Smith',
-            sister: 'Samantha Smith'
-        },
-    },
-];
-
-for (const { fullName: n, family: { father: f, mother: m } }
-    of people) {
-    console.log('fullName: ' + n + ', Father: ' + f + ', Mother: ' + m);
-}
