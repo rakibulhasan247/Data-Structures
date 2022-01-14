@@ -33,9 +33,58 @@ const restaurant = {
         console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
     },
 
+    orderPasta: function(ing1, ing2, ing3) {
+        console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
+    },
 };
+/* 
+const ingredients = [
+    prompt("Let's make pasta! Ingredient 1?"), prompt("Ingredient 2?"), prompt("Ingredient 3?")
+];
 
-restaurant.orderDelivery({
+console.log(ingredients);
+restaurant.orderPasta(...ingredients);
+ */
+
+//Objects
+const newRestaurant = {
+    foundedIn: 1998,
+    ...restaurant,
+    Founder: 'Rakibul Hasan'
+};
+console.log(newRestaurant);
+
+const restaurantCopy = {...restaurant };
+restaurantCopy.resName = 'Focus Restaurant';
+console.log(restaurantCopy.resName);
+console.log(restaurant.resName);
+
+/* 
+const arr = [7, 8, 9];
+
+const badNewArr = [1, 5, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const NewArr = [1, 2, ...arr];
+console.log(NewArr);
+console.log(...NewArr);
+console.log(...arr);
+
+const newMenu = [...restaurant.mainMenu, 'Biriyani'];
+console.log(newMenu);
+ */
+
+//copying array
+/*
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+const arrayJoin = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(arrayJoin);
+ */
+
+
+/* restaurant.orderDelivery({
     time: '22:30',
     address: 'Brahmanbaria,3045',
     mainIndex: 2,
@@ -69,7 +118,7 @@ console.log(a, b);
 const { fri: { open: o, close: c } } = openingHours;
 console.log(o, c);
 
-
+ */
 
 
 
