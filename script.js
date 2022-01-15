@@ -36,7 +36,50 @@ const restaurant = {
     orderPasta: function(ing1, ing2, ing3) {
         console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
     },
+    orderPizza: function(mainIngredient, ...otherIngredient) {
+        console.log(mainIngredient);
+        console.log(otherIngredient);
+    },
 };
+
+
+
+
+//DESTRUCTING
+//SPREAD, because on RIGHT side of =
+const arr = [1, 2, ...[3, 4]];
+
+//REST, because on LEFT side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherfoods] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(pizza, risotto, otherfoods);
+
+//Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+//FUNCTIONS
+const add = function(...numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++)
+        sum += numbers[i];
+    console.log(sum);
+};
+
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+
+const x = [10, 50, 40];
+add(...x);
+
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+
+
+
 /* 
 const ingredients = [
     prompt("Let's make pasta! Ingredient 1?"), prompt("Ingredient 2?"), prompt("Ingredient 3?")
@@ -46,6 +89,8 @@ console.log(ingredients);
 restaurant.orderPasta(...ingredients);
  */
 
+
+/* 
 //Objects
 const newRestaurant = {
     foundedIn: 1998,
@@ -58,7 +103,7 @@ const restaurantCopy = {...restaurant };
 restaurantCopy.resName = 'Focus Restaurant';
 console.log(restaurantCopy.resName);
 console.log(restaurant.resName);
-
+ */
 /* 
 const arr = [7, 8, 9];
 
