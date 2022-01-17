@@ -43,7 +43,7 @@ const restaurant = {
 };
 
 
-
+/* 
 
 //DESTRUCTING
 //SPREAD, because on RIGHT side of =
@@ -75,9 +75,26 @@ add(8, 2, 5, 3, 2, 1, 4);
 const x = [10, 50, 40];
 add(...x);
 
-
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 
+
+*/
+
+/* 
+console.log(3 || 'Hridoy');
+console.log('' || 'Hridoy');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hi' || 25 || null);
+
+restaurant.numGuests = 40;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 23;
+console.log(guests1);
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+ */
 
 
 /* 
