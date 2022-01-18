@@ -335,18 +335,19 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 <<<<<<< Updated upstream
 */
-/*
+
+
 
 //Object destructuring
 
-const hridoy = {
+/* const hridoy = {
     fullName: 'Rakibul Hasan',
     birthYear: 1997,
     isVerified: true,
 };
-
+ */
 // const { fullName, birthYear, isVerified } = hridoy;
-const { fullName, ...others } = hridoy;
+/* const { fullName, ...others } = hridoy;
 console.log(others);
 
 const m = { p: 50, f: false };
@@ -399,5 +400,4 @@ const people = [{
 for (const { fullName: n, family: { father: f, mother: m } }
     of people) {
     console.log('fullName: ' + n + ', Father: ' + f + ', Mother: ' + m);
-}; >>>
->>> > Stashed changes
+};  */
