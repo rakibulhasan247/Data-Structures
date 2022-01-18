@@ -56,6 +56,15 @@ const restaurant2 = {
     },
 };
 
+restaurant2.orderDelivery({
+    time: '22: 30',
+    address: 'Kawtoly, Brahmanbaria-3400',
+    mainIndex: 2,
+    starterIndex: 2,
+});
+
+
+
 
 let [main, , secondary] = restaurant2.categories;
 console.log(main, secondary);

@@ -335,8 +335,7 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 <<<<<<< Updated upstream
 */
-=======
-*/
+/*
 
 //Object destructuring
 
@@ -400,5 +399,5 @@ const people = [{
 for (const { fullName: n, family: { father: f, mother: m } }
     of people) {
     console.log('fullName: ' + n + ', Father: ' + f + ', Mother: ' + m);
-};
->>>>>>> Stashed changes
+}; >>>
+>>> > Stashed changes
