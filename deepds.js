@@ -43,7 +43,7 @@ const restaurant2 = {
     order: function(starterIndex, mainIndex) {
         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
     },
-    orderDelivery: function({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+    orderDelivery: function({ starterIndex, mainIndex, time, address }) {
         console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
     },
 
@@ -56,7 +56,17 @@ const restaurant2 = {
     },
 };
 
+restaurant2.orderDelivery({
+    time: '22: 30',
+    address: 'Kawtoly, Brahmanbaria-3400',
+    mainIndex: 2,
+    starterIndex: 2,
+});
 
+
+
+
+/* 
 let [main, , secondary] = restaurant2.categories;
 console.log(main, secondary);
 
@@ -75,4 +85,4 @@ const miahClan = {
 };
 
 const [dadaName, natiProfession] = miahClan.callMe(0, 1);
-console.log(dadaName, natiProfession);
+console.log(dadaName, natiProfession); */
