@@ -43,7 +43,7 @@ const restaurant2 = {
     order: function(starterIndex, mainIndex) {
         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
     },
-    orderDelivery: function({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+    orderDelivery: function({ starterIndex, mainIndex, time, address }) {
         console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
     },
 
@@ -56,9 +56,12 @@ const restaurant2 = {
     },
 };
 
-
-
-
+restaurant2.orderDelivery({
+    time: '22: 30',
+    address: 'Kawtoly, Brahmanbaria-3400',
+    mainIndex: 2,
+    starterIndex: 2,
+});
 
 
 
@@ -78,6 +81,7 @@ restaurant2.orderDelivery({
     mainIndex: 2,
     starterIndex: 2,
 });
+
 
 
 
