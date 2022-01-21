@@ -56,6 +56,22 @@ const restaurant2 = {
     },
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 restaurant2.orderDelivery({
     time: '22: 30',
     address: 'Kawtoly, Brahmanbaria-3400',
@@ -84,4 +100,4 @@ const miahClan = {
 };
 
 const [dadaName, natiProfession] = miahClan.callMe(0, 1);
-console.log(dadaName, natiProfession);
+console.log(dadaName, natiProfession); */

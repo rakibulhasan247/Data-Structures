@@ -43,6 +43,40 @@ const restaurant = {
 };
 
 
+const arr = [1, 2, ...[3, 4]];
+console.log(arr);
+
+const [pizza, , risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(pizza, risotto, otherFood);
+
+// Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// 02) Functions
+const add = function(...numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++)
+        sum += numbers[i];
+    console.log(sum);
+
+}
+
+add(2, 3);
+add(5, 3, 7, 2);
+
+const y = [55, 68, 75, 22, 10];
+add(...y)
+
+
+
+
+
+
+
+
+
+
 /* 
 
 //DESTRUCTING
@@ -62,23 +96,23 @@ console.log(weekdays);
 
 //FUNCTIONS
 const add = function(...numbers) {
-    let sum = 0;
-    for (let i = 0; i < numbers.length; i++)
-        sum += numbers[i];
-    console.log(sum);
-};
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++)
+            sum += numbers[i];
+        console.log(sum);
+    };
 
-add(2, 3);
-add(5, 3, 7, 2);
-add(8, 2, 5, 3, 2, 1, 4);
+    add(2, 3);
+    add(5, 3, 7, 2);
+    add(8, 2, 5, 3, 2, 1, 4);
 
-const x = [10, 50, 40];
-add(...x);
+    const x = [10, 50, 40];
+    add(...x);
 
-restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+    restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 
 
-*/
+    */
 
 /* 
 console.log(3 || 'Hridoy');
