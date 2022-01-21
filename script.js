@@ -43,6 +43,9 @@ const restaurant = {
 };
 
 
+
+
+/* 
 const arr = [1, 2, ...[3, 4]];
 console.log(arr);
 
@@ -69,7 +72,7 @@ const y = [55, 68, 75, 22, 10];
 add(...y)
 
 
-
+ */
 
 
 
