@@ -44,6 +44,101 @@ const restaurant = {
 
 
 
+const game = {
+    team1: 'Bayern Munich',
+    team2: 'Borrussia Dortmund',
+    players: [
+        [
+            'Neuer',
+            'Pavard',
+            'Martinez',
+            'Alaba',
+            'Davies',
+            'Kimmich',
+            'Goretzka',
+            'Coman',
+            'Muller',
+            'Gnarby',
+            'Lewandowski',
+        ],
+        [
+            'Burki',
+            'Schulz',
+            'Hummels',
+            'Akanji',
+            'Hakimi',
+            'Weigl',
+            'Witsel',
+            'Hazard',
+            'Brandt',
+            'Sancho',
+            'Gotze',
+        ],
+    ],
+    score: '4:0',
+    scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+    date: 'Nov 9th, 2021',
+    odds: {
+        team1: 1.33,
+        x: 3.25,
+        team2: 6.5,
+    },
+};
+
+/* 
+// 1.
+const [players1, players2] = game.players;
+console.log(players1, players2);
+
+// 2.
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
+
+// 3.
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final);
+
+const { odds: { team1, x: draw, team2 } } = game;
+console.log(team1, draw, team2);
+ */
+/* 
+const players1 = game.players[0];
+console.log(players1);
+
+const players2 = game.players[1];
+console.log(players2);
+
+const [gk, ...fieldPlayers] = game.players[0];
+console.log(gk, fieldPlayers);
+
+const [gk2, ...fieldPlayers2] = game.players[1];
+console.log(gk2, fieldPlayers2);
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+ */
+
+
+
+/* 
+//Logical OR assignment 
+//The logical OR assignment (x ||= y) operator only assigns if x is falsy.
+
+const a = { duration: 50, title: 'Hello' };
+
+a.duration || 10;
+console.log(a.duration);
+// expected output: 50
+
+a.title || 'title is empty.';
+console.log(a.title);
+// expected output: "title is empty"
+
+ */
 
 /* 
 const arr = [1, 2, ...[3, 4]];

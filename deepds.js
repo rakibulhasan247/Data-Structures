@@ -55,7 +55,7 @@ const restaurant2 = {
         console.log(otherIngredient);
     },
 };
-
+/* 
 restaurant2.orderDelivery({
     time: '22: 30',
     address: 'Kawtoly, Brahmanbaria-3400',
@@ -63,7 +63,7 @@ restaurant2.orderDelivery({
     starterIndex: 2,
 });
 
-
+ */
 
 
 
