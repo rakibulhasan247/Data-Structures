@@ -45,7 +45,220 @@ const restaurant = {
     },
 };
 
+/* 
 
+
+//Split and Join
+console.log('a+very+nice+string'.split('+'));
+console.log('Rakibul Hasan Redoy'.split(' '));
+
+ const [firstName, lastName]='Rakibul Hasan'.split(' ')
+
+const newName = ['Mr.',firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+
+const capitalizeName = function(name){
+    const names = name.split(' ');
+    const namesUpper = [];
+
+    for(const n of names){
+        namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    }
+    console.log(namesUpper.join(' '));
+};
+
+capitalizeName('rakibul hasan redoy')
+
+*/
+
+/* 
+const airline ='TAP Air Portugal';
+const plane ='A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[0]);
+
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
+
+
+console.log(airline.slice(4));
+console.log(airline.slice(4,7));
+console.log(airline.slice(0, airline.indexOf(' ')));
+
+console.log(airline.slice(airline.lastIndexOf(' ')+1));
+
+
+console.log(airline.slice(-8));
+console.log(airline.slice(-2));
+console.log(airline.slice(1,-1));
+
+const checkMiddleSeat = function(seat){
+
+        //B and E are Middle Seats
+        const s = seat.slice(-1);
+
+        if(s === 'B' || s==='E')
+        console.log('You got the middle seat');
+        else
+        console.log('You got lucky');
+
+
+
+}
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+*/
+
+/* 
+const airline ='TAP Air Portugal';
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+console.log('Rakibul Hasan Redoy'.toUpperCase());
+
+// const passenger = prompt('Enter your name:');
+const passenger = 'meheDi';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+
+//replacing
+
+const priceGB = '288,97£';
+const priceUS =priceGB.replace('£','$').replace(',','.');
+console.log(priceUS);
+
+const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+
+console.log(announcement.replaceAll('door','gate'));
+
+
+// Booleans
+
+const plane = 'A320neo';
+
+console.log(plane.startsWith('A320'));
+console.log(plane.endsWith('neo'));
+
+const checkBaggage = function(items){
+    
+    const baggage = items.toLowerCase();
+    if(baggage.includes('knife') || baggage.includes('gun')){
+        console.log('You are not allowed on board');
+    }
+    else
+    console.log('Welcome Aboard!');
+};
+
+checkBaggage('I have some foods and knife');
+checkBaggage('I have a camera and a laptop');
+
+
+ */
+/* 
+const question = new Map([
+['question', 'What is the best programming language in the world?'],
+[1, 'C'],
+[2, 'Java'],
+[3, 'JavaScript'],
+['correct',3],
+[true,'Correct🎗'],
+[false,'Try again!'],
+]);
+
+console.log(question);
+ 
+console.log(Object.entries(openingHours));
+
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+//Quiz App
+console.log(question.get('question'));
+
+for (const [key, value] of question){
+    if(typeof key === 'number')
+    console.log(`Option ${key}: ${value}`);
+}
+
+const option = Number(prompt('Enter your Answer: '));
+console.log(option);
+
+console.log(question.get(question.get('correct') === option));
+ */
+
+
+/* 
+
+const ordersSet = new Set([
+    'Pizza',
+    'Pasta',
+    'Pizza',
+    'Risotto',
+    'Pasta',
+    'Pizza',
+]);
+
+console.log(ordersSet);
+
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Rice'));
+
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+
+ordersSet.delete('Risotto');
+console.log(ordersSet);
+
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+const note = ['One', 'Two', 'Five', 'One', 'Ten', 'Five', 'Two'];
+
+console.log(note);
+
+const noteUnique = [...new Set(note)];
+console.log(noteUnique);
+
+
+console.log(new Set('rakibulhasanredoy').size);
+
+const rest = new Map();
+rest.set('nam','Rakibul').set(1,'IRSCB').set(2,'Cambrian College');
+
+console.log(rest);
+
+console.log(rest.size);
+rest.delete(1);
+console.log(rest);
+
+console.log(rest.get(2)); */
+
+
+
+
+
+
+
+/* 
 console.log(restaurant.openingHours?.mon?.open);
 
 const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
@@ -65,7 +278,7 @@ console.log(restaurant.orderRisotto?.(1,2) ?? "Method doesn't exit");
 
  for(const day of Object.keys(openingHours))
  console.log(day);
-
+*/
 
 /* 
 
